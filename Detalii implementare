@@ -1,0 +1,55 @@
+Task0 - am initializat matricea in programul principal si am populato 
+cu caracterul '.'.
+------------------------------------------------------------------------
+Task1 - avand coordonata y si x am introdus caracterele din string 
+pe rand in tabla de joc pana nu am dat de caracterul NULL in string
+------------------------------------------------------------------------
+Task2 - am creat un tablou cu punctajele respective pt fiecare litera.
+Am citit imputu cu functiile sscanf si fgets si am parcurs fiecare cuvant 
+calculandu-i punctajul. Daca cuvantul era de index par atunci acordam 
+punctajul lui player1 altfel lui player2.
+------------------------------------------------------------------------
+Task3 - am controlat daca cuvantul este scris pe o patratica care are
+anumite bonusuri si am calculat bonusul total care il va primi cuvantul
+daca va indeplini respectiva conditie de a contine stringul xx sau sa se 
+termina cu stringul yy. Daca se indeplinesc toate conditiile atunci se
+acorda punctajul cu bonus jucatorului respectiv.
+------------------------------------------------------------------------
+Task4 - am introdus toate cuvintele primite in tabla de joc si le-am introdus 
+intr-un vector care contine toate cuvintele deja puse in joc. Dupa am 
+parcurs toate cele 100 de cuvinte, am controlat daca nu sunt deja folosite.
+Daca cuvantul nu e folosit atunci caut pe tabla prima litera din cuvant.
+Dupa ce am gasit prima litera din cuvint 
+am controlat daca nu iese din afara tablei de joc si daca nu se suprapune 
+cu alte cuvinte. Suprapunerea am controlat-o prin simpla parcurgere a tablei
+de joc de la coordonatele primei litere si mai departe cu
+atitea indexuri cat este de lung cuvantul. Daca sau gasit doar caractere de 
+'.' atunci cuvantul e compatibil si il introduc in tabla de joc.
+Operatiunea am facuto atit pe vertical cit si pe orizontal.
+------------------------------------------------------------------------
+Task5 - am facut operatiunea de la task4 doar ca am calculat punctajul de 
+la moment a jucatorilor. Deasemenea daca cuvantul introdus e compatibil
+atunci il indroduc intro lista de cuvinte compatibile(cautarea cuvintelor 
+compatibile, spre deosebire de task4, nu se opreste la primul cuvant gasit, 
+ci cauta toate cuvintele si toate locurile in care acestea pot fi 
+introduse). Totodata memorez in liste aparte coordonatele x si y, 
+creez o lista care are elementul 1 daca e 
+compatibil vertical si respectiv o lista pentru compatibilitate orizontala.
+Dupa am parcurs lista de cuvinte compatibile si le-am calculat punctajele.
+Am luat punctajul maxim paralel cu dansul memorand indexul cuvantul care
+asigura punctaj maxim si in variabila d=1 daca e compatibil vertical, d=0 
+daca e compatibil orizontal. Dupa ce am parcurs lista si am gasit cuvantul 
+controlez daca se asigura un punctaj mai mare ca la player2, daca da atunci 
+afisez tabla de joc, altfel afisej mesajul "Fail!".
+------------------------------------------------------------------------
+Task6 - la fiecare cuvant introdus am efectuat operatiunea de la task 5 
+si la final cand am aflat cuvantul optim il introduc in lista cuvintelor 
+folosite in joc pe locul impar imediat urmator cuvantului primit la inceput, 
+dupa am introdus cuvantul optim in tabla de joc.
+Deasemenea la fiecare cuvant introdus pt playe1 am egalat variabila q=0 
+aceasta fiind variabila ce tine cont de numarul de cuvinte compatibile pt 
+situatie de joc de la moment, am zerografiat listtele ce tin cont de 
+vertical si orziontal compatibilitatea cuvantului. In final afisej tabla de 
+joc, compar scorurile finale a jucatorilor si afisez mesajul "Player X Won!" 
+unde X e nr jucatorului care a cistigat.
+
